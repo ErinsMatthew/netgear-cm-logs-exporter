@@ -1,0 +1,65 @@
+{
+    "log": {
+        "level": "debug",
+        "fileName": "logs/combined.log"
+    },
+    "modem": {
+        "address": "http://192.168.100.1",
+        "user": "admin",
+        "password": "password"
+    },
+    "endpoints": {
+        "loginForm": "/GenieLogin.asp",
+        "formTarget": "/goform/GenieLogin",
+        "index": "/Index.asp",
+        "eventLog": "/EventLog.asp"
+    },
+    "webTokenRegEx": "<input type=\"hidden\" name=\"webToken\" value=(\\d+) />",
+    "xmlFormatRegEx": "var xmlFormat = '([^']*)'",
+    "sessionIdCookieName": "SessionID",
+    "events": {
+        "rootElement": "docsDevEventTable",
+        "rowElement": "tr",
+        "fields": [
+            {
+                "element": "docsDevEvIndex",
+                "exclude": true
+            },
+            {
+                "element": "docsDevEvFirstTime",
+                "header": "First Time",
+                "type": "time"
+            },
+            {
+                "element": "docsDevEvLastTime",
+                "header": "Last Time",
+                "type": "time"
+            },
+            {
+                "element": "docsDevEvCounts",
+                "header": "Count",
+                "type": "number"
+            },
+            {
+                "element": "docsDevEvLevel",
+                "header": "Level",
+                "type": "string"
+            },
+            {
+                "element": "docsDevEvId",
+                "header": "ID",
+                "type": "number"
+            },
+            {
+                "element": "docsDevEvText",
+                "header": "Text",
+                "type": "string"
+            }
+        ]
+    },
+    "output": {
+        "format": "csv",
+        "basePath": "/tmp",
+        "fileNamePattern": "[netgear-cm-logs-]YYYYMMD-HHmmss[.csv]"
+    }
+}

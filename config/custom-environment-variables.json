@@ -1,0 +1,10 @@
+{
+    "modem": {
+        "address": "MODEM_ADDRESS",
+        "user": "MODEM_USER",
+        "password": "MODEM_PASSWORD"
+    },
+    "output": {
+        "format": "OUTPUT_FORMAT"
+    }
+}
