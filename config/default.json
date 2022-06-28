@@ -58,8 +58,8 @@
         ]
     },
     "output": {
-        "format": "csv",
+        "format": "json",
         "basePath": "/tmp",
-        "fileNamePattern": "[netgear-cm-logs-]YYYYMMD-HHmmss[.csv]"
+        "fileNamePattern": "[netgear-cm-logs-]YYYYMMD-HHmmss[.json]"
     }
 }

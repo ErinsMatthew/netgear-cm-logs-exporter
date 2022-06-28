@@ -187,6 +187,12 @@ async function getLogs( sessionId ) {
                                     event[ field.element ] = Number( event[ field.element ] );
                                     break;
 
+                                case 'string':
+                                    if ( Array.isArray( event[ field.element ] ) ) {
+                                        event[ field.element ] = event[ field.element ].join( '' );
+                                    }
+                                    break;
+
                                 case 'time':
                                     event[ field.element ] = new Date( Date.parse( String( event[ field.element ] ).replace( ', ', 'T' ) ) ).toISOString();
                                     break;
